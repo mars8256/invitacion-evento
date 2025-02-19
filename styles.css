@@ -1,0 +1,181 @@
+body {
+    background-color: #e0f7f1;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+    padding-top: 70em; /* Ajusta según sea necesario */
+    border-radius: 10px;
+    background-color: rgba(178, 224, 212, 0.8); /* Color de fondo con opacidad */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+    position: relative; /* Para posicionar el fondo */
+    overflow: hidden; 
+}
+
+.container a {
+    position: relative; /* Asegura que esté por encima del fondo */
+    z-index: 2; /* Mayor que el z-index del ::before */
+    color: #007a5e; /* Ajusta el color si es necesario */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('rosas.jpg'); /* Cambia 'rosas.jpg' por el nombre de tu imagen */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Ajusta el nivel de desenfoque */
+    z-index: 0; /* Asegura que la imagen esté detrás del texto */
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+.text-top {
+    font-size: 4em;
+    font-family: 'Lavishly Yours', serif;
+    color: #07491b;
+    margin-bottom: 10px; /* Espacio entre el texto y el círculo */
+    position: relative; /* Para que el fondo se posicione detrás */
+    z-index: 1; /* Asegura que el texto esté por encima del fondo */
+}
+
+.circle {
+    background-color: #ffe6ef;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+}
+
+
+
+.text-middle {
+    font-size: 6em;
+    font-family: 'Lavishly Yours', serif;
+    font-weight: bold;
+    color: #9c6995; /* Asegura que el color haga buen contraste */
+}
+
+.text-bottom {
+    font-family: 'Lavishly Yours', serif;
+    font-size: 4em; /* Aumentar el tamaño de la fuente */
+    color: #022b14;
+    margin-top: 10px;
+}
+
+.date {
+    font-size: 1.2em;
+    color: #005f4f;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.time {
+    background-color: #007a5e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    font-size: 2em;
+    animation: bounce 1s infinite;
+    text-align: center;
+}
+
+.time div {
+    font-size: 0.5em;
+    margin-top: 5px;
+}
+
+.message {
+    font-size: 1.5em;
+    color: #005f4f;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.timeline-item {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.timeline-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 1.3em;
+    color: #007a5e;
+    margin: 5px 0;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animación suave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
